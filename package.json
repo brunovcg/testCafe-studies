@@ -1,0 +1,30 @@
+{
+	"name": "testcafe-studies",
+	"version": "1.0.0",
+	"description": "learn-test-cafe",
+	"main": "index.js",
+	"scripts": {
+		"test:chrome": "testcafe chrome ./tests -s takeOnFails=true",
+		"test:chrome:no_cache": "testcafe chrome ./tests -s takeOnFails=true --disable-page-caching",
+		"test:chrome:headless": "testcafe chrome:headless ./tests ",
+		"test:chrome:mobile": "testcafe chrome:emulation:device=iphone X ./tests ",
+		"test:safari": "testcafe safari ./tests",
+		"test:firefox": "testcafe firefox ./tests",
+		"test-live": "testcafe chrome ./tests -L",
+		"format": "prettier --ignore-path .gitignore --write \"**/*.{js,jsx,json,ts,tsx,css,scss,md}\""
+	},
+	"keywords": [
+		"testcafe",
+		"testing",
+		"automation"
+	],
+	"author": "Bruno Gouveia",
+	"license": "ISC",
+	"dependencies": {
+		"eslint": "^8.44.0",
+		"eslint-config-prettier": "^8.8.0",
+		"eslint-plugin-prettier": "^4.2.1",
+		"prettier": "^2.8.8",
+		"testcafe": "^3.0.1"
+	}
+}

@@ -1,0 +1,82 @@
+{
+    "extends": [
+      "eslint:recommended",
+      "prettier",
+      "eslint-config-prettier"
+    ],
+    "plugins": [ "prettier", "sonarjs"],
+    "settings": {
+      "import/resolver": {
+        "node": {
+          "paths": [""],
+          "extensions": [".js", ".jsx", ".ts"]
+        }
+      }
+    },
+    "rules": {
+      "sonarjs/cognitive-complexity": "error",
+      "sonarjs/no-identical-expressions": "error",
+      "import/no-unresolved": "off",
+      "multiline-ternary": ["error", "always-multiline"],
+      "quotes": ["error", "single"],
+      "semi": ["error", "always"],
+      "comma-dangle": [
+        "error",
+        {
+          "arrays": "always-multiline",
+          "objects": "always-multiline",
+          "imports": "always-multiline",
+          "exports": "always-multiline",
+          "functions": "never"
+        }
+      ],
+      "max-len": [
+        "error",
+        {
+          "code": 140,
+          "ignoreStrings": true
+        }
+      ],
+      "no-empty": "error",
+      "no-use-before-define": [
+        "error",
+        {
+          "functions": false,
+          "classes": false,
+          "variables": true
+        }
+      ],
+      "space-before-function-paren": "off",
+      "indent": [
+        "error",
+        2,
+        {
+          "SwitchCase": 1,
+          "offsetTernaryExpressions": true,
+          "ignoredNodes": ["TemplateLiteral > *"]
+        }
+      ],
+      "jsx-a11y/no-static-element-interactions": "off",
+      "import/no-extraneous-dependencies": ["error", { "devDependencies": true }],
+      "no-unused-vars": 0,
+      "prefer-arrow-callback": "off",
+      "no-plusplus": "off",
+      "import/prefer-default-export": "off",
+      "import/no-named-as-default-member": "off",
+      "arrow-body-style": ["error", "as-needed"],
+      "jsx-a11y/no-noninteractive-element-to-interactive-role": "off",
+      "jsx-a11y/interactive-supports-focus": "off",
+      "import/extensions": [
+        "error",
+        "ignorePackages",
+        {
+          "": "never",
+          "js": "never",
+          "jsx": "never",
+          "ts": "never",
+          "tsx": "never"
+        }
+      ]
+    }
+  }
+  
